@@ -1,0 +1,44 @@
+/* Styles for the Plugin Settings Page  */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.center{
+    width: 50%;
+    padding: 2em;
+    background-color: rgba(209, 213, 216, 0.826);
+    border-radius: 1em;
+    box-shadow: 2px 2px 5px black;
+}
+
+.align-center{
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.inputForm{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.lg{
+    font-size: 1.2em;
+}
+
+.pluginSettingsInput{
+    width: 20%;
+}
+
+.todo{
+    padding: 5px;
+    margin: 0;
+    border:1px solid red;
+}
