@@ -1,29 +1,29 @@
 <?php
-// Enqueue scripts and styles
+
+// Enqueue Front-end scripts
 function hide_header_on_scroll_enqueue_front_end_scripts() {
-    // Front-end Enqueue JavaScript
-    // wp_enqueue_script(
-    //     'hide-header-on-scroll-script',
-    //     HIDE_HEADER_PLUGIN_URL . 'front-end/js/hide-header-on-scroll-front-end.js',
-    //     [ 'wp-util' ],
-    //     '1.0',
-    //     true
-    // );
-
-    // Front-end Enqueue CSS
-    wp_enqueue_style(
-        'hide-header-on-scroll-style',
-        HIDE_HEADER_PLUGIN_URL . 'front-end/css/hide-header-on-scroll-front-end.css',
+    
+    wp_register_script('hide-header-on-scroll-frontend',
+        HIDE_HEADER_PLUGIN_URL . 'front-end/js/hide-header-on-scroll-front-end.js',
         [],
-        '1.0'
+        '1.0',
+        true
     );
+
+    wp_enqueue_script('hide-header-on-scroll-frontend');
+    
+    $options = get_option('hide_header_on_scroll_option');
+    $options['logged_in'] = is_user_logged_in();
+
+    wp_add_inline_script( 'hide-header-on-scroll-frontend', 'const options = ' . json_encode( $options ), 'before' );
 }
-add_action('wp_enqueue_scripts', 'hide_header_on_scroll_enqueue_front_end_scripts');
+
+add_action('wp', 'hide_header_on_scroll_enqueue_front_end_scripts');
 
 
-//Enqueue Admin styles and scripts
+//Enqueue Admin scripts
 function hide_header_on_scroll_enqueue_admin_scripts(){
-    //enqueue admin scripts
+    //enqueue admin scripts NONE SO FAR
     wp_enqueue_script(
         'hide-header-on-scroll-script',
         HIDE_HEADER_PLUGIN_URL . 'admin/js/hide-header-on-scroll-admin.js',
@@ -32,12 +32,5 @@ function hide_header_on_scroll_enqueue_admin_scripts(){
         true
     );
     
-    // enqueue admin styles
-    wp_enqueue_style(
-        'hide-header-on-scroll-style',
-        HIDE_HEADER_PLUGIN_URL . 'admin/css/hide-header-on-scroll-admin.css',
-        [],
-        time(),
-    );
 }
-add_action('admin_enqueue_scripts', 'hide_header_on_scroll_enqueue_admin_scripts');
+// add_action('admin_enqueue_scripts', 'hide_header_on_scroll_enqueue_admin_scripts');

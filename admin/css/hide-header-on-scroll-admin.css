@@ -1,5 +1,5 @@
 /* Styles for the Plugin Settings Page  */
-.container{
+.hide-header-container{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -40,5 +40,5 @@
 .todo{
     padding: 5px;
     margin: 0;
-    border:1px solid red;
+    border:1px solid rgb(0, 72, 255);
 }

@@ -25,8 +25,11 @@ define ('HIDE_HEADER_PLUGIN_PATH', plugin_dir_path(__FILE__) );
 // add the plugin link into the admin panel
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-menus.php');
 
-//enqueue scripts and styles
+//enqueue scripts
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-scripts.php');
+
+//enqueue styles
+include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-styles.php');
 
 // add a settings link to the plugin when it is activated with a filter
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-settings.php');
@@ -34,7 +37,7 @@ include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-settings.ph
 // add the plugin settings into the database
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-options.php');
 
-
+{/* 
 //add the ajax hook
 function my_ajax_handler(){
 	$options = get_option('hide_header_on_scroll_option');
@@ -43,3 +46,4 @@ function my_ajax_handler(){
 
 add_action( 'wp_ajax_get_data', 'my_ajax_handler' );		//hook for logged in user
 add_action( 'wp_ajax_nopriv_get_data', 'my_ajax_handler' );	//hook for user that is not logged in
+*/}
