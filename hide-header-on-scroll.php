@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name:         Hide Header on Scroll
+ * Plugin Name:         Hide Header On Scroll
  * Plugin URI:          https://renegombar.com/wordpress/plugin
- * Description:         Hides the header on scroll for any theme.
+ * Description:         Default settings work with OceanWP theme, but can be used with other themes. Plugin makes the header fade in/out at a specified amount of scroll value. By default the plugin uses OceanWP's Theme header id and main-div id, but it can be set up for any Theme that uses a header element and main-content element. Plugin does not support top bar! To access the Plugin Settings open Admin Bar > Settings > Hide Header Plugin.
  * Version:             1.0.0
  * Author:              Rene Gombar
  * Author URI:          https://renegombar.com
@@ -36,7 +36,7 @@ include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-scripts.php
 //enqueue styles
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-styles.php');
 
-// add a settings link to the plugin when it is activated with a filter
+// add a settings link to the plugin when it is activated on General Plugins Page
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-settings.php');
 
 //setup settings fields

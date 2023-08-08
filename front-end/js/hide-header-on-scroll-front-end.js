@@ -25,11 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // add the admin bar to the total offset
     const topMarginOffset = (adminTopBar ? adminTopBarHeight : 0) 
 
-
-    //if header exists add a new css class to it 
-    header 
-    ? header.classList.add("visible-header") 
-    : console.log(`ERROR: header element with the id of #${settings.header_id} does not exist!`)
+    //if header exists add styles to it 
+    if (header){
+        header.style.position = 'fixed'
+        header.style.top = 0
+        header.style.transition = `${settings.animation_length}s linear`
+    }
+    else{
+        console.log(`ERROR: header element with the id of #${settings.header_id} does not exist!`)
+    }
     
     {/* frontEndTopBar
     ? frontEndTopBar.classList.add("visible-topBar") 
@@ -37,7 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
     */}
 
     //check if Admin Top Bar is present and appply margin offset
-    topMarginOffset > 0 ? header.style.marginTop = `${topMarginOffset}px` : null
+    topMarginOffset > 0 
+        ? header 
+            ? header.style.marginTop = `${topMarginOffset}px` 
+            : null
+        :null
     
     // add the top margin to the main page to offset it the header height
     mainWindow 

@@ -42,7 +42,7 @@ function hide_header_plugin_settings(){
 
         //array with arguments
         array(
-            'description' => __('ID of the header element. default: "site-header"','hideonscroll')
+            'description' => __('ID of the header element. OceanWP default: "site-header"','hideonscroll')
         )
     );
 
@@ -64,7 +64,7 @@ function hide_header_plugin_settings(){
 
         //array with arguments
         array(
-            'description' => __('ID of the main div element. default: "main"','hideonscroll')
+            'description' => __('ID of the main div element. OceanWP default: "main"','hideonscroll')
         )
     );
 
@@ -87,7 +87,7 @@ function hide_header_plugin_settings(){
 
         //array with arguments
         array(
-            'description' => __('You can find this value in the page customizer > Header > General > Height(px)','hideonscroll')
+            'description' => __('In OceanWP You can find this value in the page customizer > Header > General > Height(px)','hideonscroll')
         )
     );
 
@@ -131,7 +131,7 @@ function hide_header_plugin_settings(){
 
         //array with arguments
         array(
-            'description' => __('Length of the hiding animation from visible to invisible. default: 1','hideonscroll')
+            'description' => __('Length of the hiding animation from visible to invisible. default:1','hideonscroll')
         )
     );
 

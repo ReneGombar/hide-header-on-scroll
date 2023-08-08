@@ -10,7 +10,7 @@
 }
 
 .center{
-    width: 50%;
+    width: 80%;
     padding: 2em;
     background-color: rgba(209, 213, 216, 0.826);
     border-radius: 1em;
@@ -22,11 +22,8 @@
     padding-bottom: 1em;
 }
 
-
-.todo{
-    padding: 5px;
-    margin: 0;
-    border:1px solid rgb(0, 72, 255);
+.warning{
+    color:red;
 }
 
 .tooltip {
