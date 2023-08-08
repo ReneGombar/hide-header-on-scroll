@@ -12,10 +12,11 @@ function hide_header_on_scroll_enqueue_front_end_scripts() {
 
     wp_enqueue_script('hide-header-on-scroll-frontend');
     
-    $options = get_option('hide_header_on_scroll_option');
-    $options['logged_in'] = is_user_logged_in();
+    $settings = get_option('hide_header_plugin_settings');
+    $settings['logged_in'] = is_user_logged_in();
 
-    wp_add_inline_script( 'hide-header-on-scroll-frontend', 'const options = ' . json_encode( $options ), 'before' );
+    //provide variables to the front end script
+    wp_add_inline_script( 'hide-header-on-scroll-frontend', 'const settings = ' . json_encode( $settings ), 'before' );
 }
 
 add_action('wp', 'hide_header_on_scroll_enqueue_front_end_scripts');

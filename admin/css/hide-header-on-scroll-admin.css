@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 .center{
@@ -22,20 +22,6 @@
     padding-bottom: 1em;
 }
 
-.inputForm{
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.lg{
-    font-size: 1.2em;
-}
-
-.pluginSettingsInput{
-    width: 20%;
-}
 
 .todo{
     padding: 5px;

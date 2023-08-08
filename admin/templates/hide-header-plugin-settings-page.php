@@ -10,9 +10,10 @@
         </form>
         <br/>
         
+
         <?php 
-        $options = get_option('hide_header_plugin_settings');
-        var_dump($options);
+        
+        var_dump( get_option('hide_header_plugin_settings') );
         ?>
         
         </div>

@@ -3,8 +3,12 @@
 
 document.addEventListener('DOMContentLoaded', function() {    
 
+    console.log(settings)
     // get header element
-    const header = document.querySelector(options.header_id)
+    const header = document.querySelector(`#${settings.header_id}`)
+
+    //get the main div of the page
+    const mainWindow = document.querySelector(`#${settings.main_id}`)  
 
     //try to get the Admin top bar element
     const adminTopBar = document.querySelector("#wpadminbar")
@@ -18,16 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('admin top bar height: ' + adminTopBarHeight)
     // console.log('front-end top bar height: ' + frontTopBarHeight)
 
-    // add the admin bar and front-end bar sizes to the total offset
+    // add the admin bar to the total offset
     const topMarginOffset = (adminTopBar ? adminTopBarHeight : 0) 
 
-    //get the main div of the page
-    const mainWindow = document.querySelector(options.main_div_id)  
 
     //if header exists add a new css class to it 
     header 
     ? header.classList.add("visible-header") 
-    : console.log(`ERROR: header element with the id of ${options.header_id} does not exist!`)
+    : console.log(`ERROR: header element with the id of #${settings.header_id} does not exist!`)
     
     {/* frontEndTopBar
     ? frontEndTopBar.classList.add("visible-topBar") 
@@ -39,11 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // add the top margin to the main page to offset it the header height
     mainWindow 
-        ? mainWindow.style.marginTop = `${options.header_height}px`
-        : console.log(`ERROR: main div element with the id of ${options.main_div_id} does not exist!`)
+        ? mainWindow.style.marginTop = `${settings.header_height}px`
+        : console.log(`ERROR: main div element with the id of #${settings.main_id} does not exist!`)
 
     //function to hide the scroll
-    const hideAtScroll = window.innerWidth < 500 ?  Math.floor(options.hide_at_scrollY / 2 ) :  options.hide_at_scrollY
+    const hideAtScroll = window.innerWidth < 500 ?  Math.floor(settings.hide_after_scroll / 2 ) :  settings.hide_after_scroll
     
 
     function hideHeaderOnScroll(){
