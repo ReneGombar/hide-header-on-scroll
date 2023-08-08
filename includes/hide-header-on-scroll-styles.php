@@ -26,7 +26,7 @@ function hide_header_on_scroll_enqueue_admin_styles($hook){
     );
 
     // enqueue the style if on plugin admin page
-    if( 'toplevel_page_hideonscroll' == $hook ){
+    if( 'settings_page_hideonscroll' == $hook ){
         wp_enqueue_style( 'hide-header-on-scroll-admin' );
     }
 }

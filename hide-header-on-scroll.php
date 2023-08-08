@@ -37,7 +37,10 @@ include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-settings.ph
 // add the plugin settings into the database
 include ( HIDE_HEADER_PLUGIN_PATH .  'includes/hide-header-on-scroll-options.php');
 
-{/* 
+//setup settings fields
+include( HIDE_HEADER_PLUGIN_PATH . 'includes/hide-header-on-scroll-fields.php');
+
+/*
 //add the ajax hook
 function my_ajax_handler(){
 	$options = get_option('hide_header_on_scroll_option');
@@ -46,4 +49,4 @@ function my_ajax_handler(){
 
 add_action( 'wp_ajax_get_data', 'my_ajax_handler' );		//hook for logged in user
 add_action( 'wp_ajax_nopriv_get_data', 'my_ajax_handler' );	//hook for user that is not logged in
-*/}
+*/

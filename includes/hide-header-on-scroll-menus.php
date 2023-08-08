@@ -1,6 +1,7 @@
 <?php
 function hide_header_on_scroll_plugin_settings_page(){
-    add_menu_page(
+    add_submenu_page(
+        'options-general.php',
         'Hide Header on Scroll',
         'Hide Header',
         'manage_options',
@@ -19,9 +20,7 @@ function hide_header_on_scroll_plugin_settings_page_markup(){
     if (!current_user_can('manage_options')){
         return;
     }
-    // diplay Plugin Temaplate page
-    include ( HIDE_HEADER_PLUGIN_PATH .  'admin/templates/settings-page.php');    
+    // display Plugin Temaplate page
+    // include ( HIDE_HEADER_PLUGIN_PATH .  'admin/templates/settings-page.php');    
+    include ( HIDE_HEADER_PLUGIN_PATH .  'admin/templates/settings-page_2.php');    
 }
-
-
-

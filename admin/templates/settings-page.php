@@ -2,6 +2,7 @@
 $options = get_option('hide_header_on_scroll_option')
 ?>
 
+<div class="wrap">
 <div class="hide-header-container">
         <div class="center">
         <h1 class="align-center"><?php echo esc_html(get_admin_page_title()); ?> Plugin Settings</h1> 
@@ -55,3 +56,4 @@ $options = get_option('hide_header_on_scroll_option')
         </div>
         </div>
     </div>
+</div>
