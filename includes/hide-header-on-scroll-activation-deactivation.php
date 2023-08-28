@@ -2,11 +2,9 @@
 // Activation hook
 function hide_header_on_scroll_plugin_activate() {
     // create new table entry in options table
-    $options = [
-    ];  
-
-    $options['header_id'] = 'site-header';
-    $options['main_id'] = 'main';
+    $options = [];  
+    $options['header_id'] = 'not set';
+    $options['main_id'] = 'not set';
     $options['header_height'] = 100;
     $options['hide_after_scroll'] = 100;
     $options['animation_length'] = 1;

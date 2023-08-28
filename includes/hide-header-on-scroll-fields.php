@@ -2,7 +2,7 @@
 //setup plugin sections and fileds
 function hide_header_plugin_settings(){
 
-    //check if options exist in db
+    //check if options entry in the table exists in db
     if( !get_option('hide_header_plugin_settings')){
         add_option('hide_header_plugin_settings');
     }
@@ -22,6 +22,30 @@ function hide_header_plugin_settings(){
         //admin page to add section to
         'hideonscroll'
     );
+
+    //Detect Elements IDS Checkbox
+    /*add_settings_field(
+        //unique field name
+        'hide_header_plugin_settings_detect_checkbox',
+
+        //Field Title
+        __('Detect Page Elements','hideonscroll'),
+
+        //callback for field markup
+        'hide_header_plugin_detect_checkbox_field_markup',
+
+        //page to go on
+        'hideonscroll',
+
+        //section to go in
+        'hide_header_plugin_settings_section',
+
+        //array with arguments
+        array(
+            'label' => __('Automatically detect elemement IDs','hideonscroll'),
+            'description' => __('MUST FILL OUT','hideonscroll')
+        )
+    );*/
 
     // Setup input for Header Element ID
     add_settings_field(

@@ -17,6 +17,13 @@
     box-shadow: 2px 2px 5px black;
 }
 
+.detectionBlock{
+    padding: 1em;
+    border: 1px solid black;
+    border-radius:1em;
+    background-color: #97e4e442;
+}
+
 .align-center{
     text-align: center;
     padding-bottom: 1em;

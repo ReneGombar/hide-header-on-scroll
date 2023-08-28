@@ -15,8 +15,37 @@ function hide_header_plugin_settings_section_markup(){
     
 }   
 
+//Detect elements cjebox markup
+/*function hide_header_plugin_detect_checkbox_field_markup($args)
+{   
+    
+    $options = get_option('hide_header_plugin_settings');
+    
+    if (isset ($options['detect_checkbox'])){
+        $detect_checkbox = esc_html($options['detect_checkbox']);
+    }
+    else{
+        $detect_checkbox = 0;
+    }
+    $html = '<input type="checkbox" id="hide_header_plugin_detect_checkbox" name="hide_header_plugin_settings[detect_checkbox]"';
+    $html .= 'value="1" ' .checked(1, $detect_checkbox, false) . '/>';
+    echo $html;
+    echo '<label for="hide_header_plugin_detect_checkbox">' . $args['label'] . '</label>';
+    ?>
+    
+    <i href="#" class='tooltip'>
+        <span class='why'>
+            i
+        </span>
+        <span class='tip'><?php esc_html_e( $args['description'] , 'hideonscroll')?></span>
+    </i>
+    <?php
+}*/
+
+
 //header height markup
 function hide_header_plugin_header_height_markup($args){
+    
     $options = get_option('hide_header_plugin_settings');
     $header_height = '';
 

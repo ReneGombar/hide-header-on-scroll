@@ -27,6 +27,11 @@ By default YES, but the plugin can be changed to work with other themes by chang
 
 == Changelog ==
 
+
+= 1.1 =
+* Added detect button inside admin-setting page to easily detect header and main divs IDs
+* Optimization for other themes
+
 = 1.0 =
 * First version with default values for OceanWP Themes.
 * Plugin Settings allow it be used with other themes.
